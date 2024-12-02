@@ -1,0 +1,97 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+<!--
+    <record model="ir.ui.view" id="expire_popup.list">
+      <field name="name">expire_popup list</field>
+      <field name="model">expire_popup.expired_product_alert</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="product_name"/>
+          <field name="alert_date"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+
+    <record id="view_expired_product_notification_kanban" model="ir.ui.view">
+        <field name="name">expired.product.notification.kanban</field>
+        <field name="model">expire_popup.expired_product_alert</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="product_name"/>
+                <field name="alert_date"/>
+            </kanban>
+        </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="expire_popup.action_window">
+      <field name="name">expire_popup window</field>
+      <field name="res_model">expire_popup.expire_popup</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="expire_popup.action_server">
+      <field name="name">expire_popup server</field>
+      <field name="model_id" ref="model_expire_popup_expire_popup"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="expire_popup" id="expire_popup.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="expire_popup.menu_1" parent="expire_popup.menu_root"/>
+    <menuitem name="Menu 2" id="expire_popup.menu_2" parent="expire_popup.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="expire_popup.menu_1_list" parent="expire_popup.menu_1"
+              action="expire_popup.action_window"/>
+    <menuitem name="Server to list" id="expire_popup" parent="expire_popup.menu_2"
+              action="expire_popup.action_server"/>
+-->
+
+
+    <!-- views/expire_alert_view.xml -->
+
+
+<!-- views/expire_alert_view.xml -->
+
+  </data>
+</odoo>
+
+
+
+<!--
+<odoo>
+    <data>
+        <template id="view_expire_alert" name="expire_popup.expire_alert" inherit_id="web.external_layout">
+            <xpath expr="//div[@id='wrapwrap']/div[@id='oe_main_menu_navbar']" position="inside">
+                <div class="oe_expire_alert_container" id="oe_expire_alert_container">
+                    <t t-call="expire_popup.expire_alert"/>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
+-->

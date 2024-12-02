@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_expire_popup_expire_popup,expire_popup.expire_popup,model_expire_popup_expire_popup,base.group_user,1,1,1,1
